@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
-    <title>ACL Bootstrap</title>
+    <title>Calculator</title>
 </head>
 
 <body>
 
     <header>
+        <div class="header-title">LAB-03a-Calculator</div>
         <div class="gutter-right logo">
             <img src="assets/big-logo.png"/>
         </div>
@@ -35,12 +36,15 @@
 
             <input type="text" id="input-2">
 
-            <button id="multi-btn">Compute</button>
+            <button id="multi-btn">Select Left</button>
 
         </section>
 
-        <div id="multi-output">output:</div>
-        <button id="decimal-button">MORE DECIMALS</button>
+        <section class="output-area">
+            <h3>Computed Value (Try a decimal!):</h3>
+            <div id="multi-output">---</div>
+            <button id="decimal-button">MORE DECIMALS</button>
+        </section>
     </main>
 
     <footer>

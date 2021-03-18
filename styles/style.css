@@ -11,7 +11,7 @@ body {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
@@ -42,10 +42,27 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    padding-top: 5rem;
 }
 
 /* ------- CSS above is Bootstrap Code ------- */
 
 button{
     width: 6rem;
+}
+
+.output-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#decimal-button{
+    width: 10rem;
+}
+
+header .header-title{
+    align-self: center;
+    margin-left: 2rem;
 }
