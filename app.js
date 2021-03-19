@@ -1,3 +1,5 @@
+
+
 const inputOne = document.getElementById('input-1');
 const inputTwo = document.getElementById('input-2');
 const multiOutput = document.getElementById('multi-output');
@@ -7,11 +9,11 @@ const multiBtn = document.getElementById('multi-btn');
 
 const moreDecimalButton = document.getElementById('decimal-button');
 
-let convert = { 
-    ADD: ['+', function(n1, n2){return n1 + n2;}], 
-    SUBTRACT: ['-', function(n1, n2){return n1 - n2;}],
-    MULTIPLY: ['*', function(n1, n2){return n1 * n2;}], 
-    DIVIDE: ['/', function(n1, n2){return n1 / n2;}] 
+const convert = { 
+    ADD: function(n1, n2){return n1 + n2;}, 
+    SUBTRACT: function(n1, n2){return n1 - n2;},
+    MULTIPLY: function(n1, n2){return n1 * n2;}, 
+    DIVIDE: function(n1, n2){return n1 / n2;}
 };
 
 const functionChooser = (e) => {
@@ -24,8 +26,9 @@ let decimalPlaces = 2;
 let value;
 
 const multiMath = (e, dec) => {
-    if (multiPicker.value !== 'null' && inputOne.value && inputTwo.value){    
-        let nextVal = convert[multiPicker.value][1](Number(inputOne.value), Number(inputTwo.value));
+    if (multiPicker.value !== 'null' && inputOne.value && inputTwo.value){   
+
+        let nextVal = convert[multiPicker.value](Number(inputOne.value), Number(inputTwo.value));
 
         if (value !== nextVal || value === nextVal && !dec){
             decimalPlaces = 2;
