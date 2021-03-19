@@ -5,7 +5,7 @@ const test = QUnit.test;
 // convert > {add, subtract, multiply, divide}
 
 
-test('Addition', (expect) => {
+test('Integer Addition, expects 6 + 4', (expect) => {
     //Arrange
     const expected = 10;
     
@@ -17,7 +17,7 @@ test('Addition', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('Subtraction', (expect) => {
+test('Integer Subtraction, expects 10 - 4', (expect) => {
     //Arrange
     const expected = 6;
     
@@ -29,7 +29,7 @@ test('Subtraction', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('Multiplication', (expect) => {
+test('Integer Multiplication, expects 10 * 2', (expect) => {
     //Arrange
     const expected = 20;
     
@@ -41,7 +41,7 @@ test('Multiplication', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('Division', (expect) => {
+test('Integer Division, expects 16 / 2', (expect) => {
     //Arrange
     const expected = 8;
     
