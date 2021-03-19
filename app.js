@@ -1,20 +1,12 @@
-
+import { convert } from './utils.js';
 
 const inputOne = document.getElementById('input-1');
 const inputTwo = document.getElementById('input-2');
 const multiOutput = document.getElementById('multi-output');
 const multiPicker = document.getElementById('picker');
 const multiBtn = document.getElementById('multi-btn');
-
-
 const moreDecimalButton = document.getElementById('decimal-button');
 
-const convert = { 
-    ADD: function(n1, n2){return n1 + n2;}, 
-    SUBTRACT: function(n1, n2){return n1 - n2;},
-    MULTIPLY: function(n1, n2){return n1 * n2;}, 
-    DIVIDE: function(n1, n2){return n1 / n2;}
-};
 
 const functionChooser = (e) => {
     let value = e.target.value;

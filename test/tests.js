@@ -1,16 +1,55 @@
+import { convert } from '../utils.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+// convert > {add, subtract, multiply, divide}
+
+
+test('Addition', (expect) => {
     //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
+    const expected = 10;
     
     //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+    const actual = convert['add'](6, 4);
 
     //Expect
-    // Make assertions about what is expected versus the actual result
+
     expect.equal(actual, expected);
 });
+
+test('Subtraction', (expect) => {
+    //Arrange
+    const expected = 6;
+    
+    //Act 
+    const actual = convert['subtract'](10, 4);
+
+    //Expect
+
+    expect.equal(actual, expected);
+});
+
+test('Multiplication', (expect) => {
+    //Arrange
+    const expected = 20;
+    
+    //Act 
+    const actual = convert['multiply'](10, 2);
+
+    //Expect
+
+    expect.equal(actual, expected);
+});
+
+test('Division', (expect) => {
+    //Arrange
+    const expected = 8;
+    
+    //Act 
+    const actual = convert['divide'](16, 2);
+
+    //Expect
+
+    expect.equal(actual, expected);
+});
+
